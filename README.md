@@ -9,7 +9,7 @@ Two related tasks on the public Olist Brazilian e-commerce data (SmartCommerce i
 
 ## Live dashboard
 
-Streamlit app: **[add the Streamlit Community Cloud URL here after deploying]**
+Streamlit app: https://tcx3901-sellerreliability.streamlit.app
 
 Run locally:
 
@@ -24,7 +24,7 @@ streamlit run streamlit_app.py
 |---|---|
 | `streamlit_app.py` | EDA dashboard (lead-time distribution, review scores, orders per seller, category lead time, with filters). Reads the CSVs in `data/`. |
 | `data/` | The five Olist tables used in the project, plus the category name translation table. |
-| `notebooks/v1_Report1_2026-09-12/` | **Version 1:** the notebook as submitted with Report 1 (HTML export): TCX3901_Group5_DY_Report1_Notebook_v1.html |
+| `notebooks/v1_Report1_2026-09-12/` | **Version 1:** the notebook as submitted with Report 1 (HTML export): `TCX3901_Group5_DY_Report1_Notebook_v1.html` |
 | `notebooks/v2_2026-10-08/` | **Version 2:** the current notebook (`TCX3901_Group5_DY_SellerReliabilityNotebook_v2.ipynb`), used for Presentation 1. |
 | `docs/NB_EditPostR1.pdf` | Change log: every change from version 1 to version 2. |
 
