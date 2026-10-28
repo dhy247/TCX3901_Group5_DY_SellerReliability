@@ -23,7 +23,7 @@ streamlit run streamlit_app.py
 | Path | What it is |
 |---|---|
 | `streamlit_app.py` | EDA dashboard (lead-time distribution, review scores, orders per seller, category lead time, with filters). Reads the CSVs in `data/`. |
-| `data/` | The five Olist tables used in the project, plus the category name translation table. |
+| `data/` | The five Olist tables used in the project, the category name translation table, and the payments table (one data-quality check only; see Data below). |
 | `notebooks/v1_Report1_2026-09-12/` | **Version 1:** the notebook as submitted with Report 1 (HTML export): `TCX3901_Group5_DY_Report1_Notebook_v1.html` |
 | `notebooks/v2_2026-10-08/` | **Version 2:** the current notebook (`TCX3901_Group5_DY_SellerReliabilityNotebook_v2.ipynb`), used for Presentation 1. |
 | `docs/NB_EditPostR1.pdf` | Change log: every change from version 1 to version 2. |
@@ -32,9 +32,12 @@ streamlit run streamlit_app.py
 
 - **v1 (12 Sep 2026):** Report 1 submission. Baselines A (overall mean) and B (seller's own mean), order-level classification baseline, four EDA figures.
 - **v2 (8 Oct 2026):** adds Baseline C (median of the last 30 training days, MAE 2.81 / RMSE 3.99) with a 30/60/90-day sensitivity check, a leakage check, the drop-not-impute step (2,945 sellers), extra reconciliation cells for the order and seller counts, Figure 3b (slide 7 chart) and Figure 4b. No Report 1 number changed. Details: `docs/NB_EditPostR1.pdf`.
+- **v3 (work in progress, `notebooks/v3_wip/`):** Report 2 work. Reads data from this repository's `data/` folder; v2 stays unchanged.
 
-To run the notebook, set `DATA_DIR` in Section 1 to the `data/` folder of this repository.
+To run the notebook, open it from its own folder in `notebooks/`. From v3 onwards, `DATA_DIR` already points to this repository's `data/` folder (`../../data`). For v1 and v2, set `DATA_DIR` in Section 1 to the `data/` folder.
 
 ## Data
 
 Olist Brazilian E-Commerce Public Dataset (Kaggle), licensed CC BY-NC-SA 4.0. Used here for non-commercial academic purposes.
+
+- `olist_order_payments_dataset.csv`: used only in Section 3.1.1 (the "created" orders check) to see whether those 5 orders were paid. Not one of the 5 modelling tables.
